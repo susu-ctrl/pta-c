@@ -1,42 +1,42 @@
 #include<stdio.h>  
-
-int main() {
-    int amount; // ×ÜÊı  
-    int hundred, fifty, twenty, ten, five, two, one; // ·Ö±ğ¶ÔÓ¦¸÷ÖÖÃæ¶îµÄÖ½±ÒÕÅÊı  
-
-    // ¶ÁÈ¡½±½ğ½ğ¶î  
-    scanf("%d", &amount);
-
-    // ÑéÖ¤½ğ¶îÊÇ·ñ´óÓÚ1ÍòÔª  
-    if (amount > 10000) {
-        // Èç¹û½ğ¶î´óÓÚ1ÍòÔª£¬ÔòÊä³ö´íÎó  
-        printf("½±½ğ½ğ¶î³¬¹ıÏŞÖÆ¡£\n");
-        return 1; // Í¬Ñù£¬·ÇÁã·µ»ØÖµ±íÊ¾³ÌĞòÒì³£ÍË³ö  
-    }
-
-    // ¼ÆËã²¢·ÖÅäÃ¿ÖÖÃæ¶îµÄÖ½±ÒÕÅÊı  
-    hundred = amount / 100;
-    amount %= 100;
-    fifty = amount / 50;
-    amount %= 50;
-    twenty = amount / 20;
-    amount %= 20;
-    ten = amount / 10;
-    amount %= 10;
-    five = amount / 5;
-    amount %= 5;
-    two = amount / 2;
-    amount %= 2;
-    one = amount;
-
-    // Êä³ö½á¹û  
-    printf("100Ôª: %dÕÅ\n", hundred);
-    printf(" 50Ôª:  %dÕÅ\n", fifty);
-    printf(" 20Ôª:  %dÕÅ\n", twenty);
-    printf(" 10Ôª:  %dÕÅ\n", ten);
-    printf("  5Ôª:  %dÕÅ\n", five);
-    printf("  2Ôª:  %dÕÅ\n", two);
-    printf("  1Ôª:  %dÕÅ\n", one);
-
-    return 0; // ³ÌĞòÕı³£ÍË³ö  
+  
+int main() {  
+    int amount; // æ€»æ•°  
+    // è¯»å–å¥–é‡‘é‡‘é¢  
+    scanf("%d", &amount);  
+      // è®¡ç®—å¹¶åˆ†é…æ¯ç§é¢é¢çš„çº¸å¸å¼ æ•°  
+        int hundred = amount / 100;  
+        amount %= 100;  
+        int fifty = amount / 50;  
+        amount %= 50;  
+        int twenty = amount / 20;  
+        amount %= 20;  
+        int ten = amount / 10;  
+        amount %= 10;  
+        int five = amount / 5;  
+        amount %= 5;  
+        int two = amount / 2;  
+        int one = amount % 2;
+    // éªŒè¯é‡‘é¢æ˜¯å¦å°äº1ä¸‡å…ƒ  
+    if (hundred > 9 ) { 
+        // è¾“å‡ºç»“æœ  
+        printf("100å…ƒ: %då¼ \n", hundred);  
+        printf(" 50å…ƒ:  %då¼ \n", fifty);  
+        printf(" 20å…ƒ:  %då¼ \n", twenty);  
+        printf(" 10å…ƒ:  %då¼ \n", ten);  
+        printf("  5å…ƒ:  %då¼ \n", five);  
+        printf("  2å…ƒ:  %då¼ \n", two);  
+        printf("  1å…ƒ:  %då¼ ", one);  
+    } else {  
+        // è¾“å‡ºç»“æœ  
+        printf("100å…ƒ:  %då¼ \n", hundred);  
+        printf(" 50å…ƒ:  %då¼ \n", fifty);  
+        printf(" 20å…ƒ:  %då¼ \n", twenty);  
+        printf(" 10å…ƒ:  %då¼ \n", ten);  
+        printf("  5å…ƒ:  %då¼ \n", five);  
+        printf("  2å…ƒ:  %då¼ \n", two);  
+        printf("  1å…ƒ:  %då¼ ", one);
+    }  
+  
+    return 0; // ç¨‹åºæ­£å¸¸é€€å‡º  
 }
